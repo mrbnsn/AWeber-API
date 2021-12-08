@@ -51,3 +51,10 @@ All request endpoints will are relative to `http://127.0.0.1:5000`.
 - SQLAlchemy (to model the data)
 - Marshmallow (to serialize the data)
 - SQLite
+
+## Bandit Security Testing
+Results of `bandit` security testing can be found in `bandit-results.json` in the project root directory.
+To run the tests again:
+
+1. Start the virtual environment: `$ source venv/bin/activate`
+2. Run Bandit and output json results to file: `$ bandit -r . -f json -o bandit-results.json`
