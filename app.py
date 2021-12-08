@@ -5,11 +5,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
-
-# @TODO:
-# Unit Tests
-# OpenAPI spec file
-
 basedir: str = os.path.abspath(os.path.dirname(__file__))
 
 # Init and configure app
