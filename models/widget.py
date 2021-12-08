@@ -14,9 +14,9 @@ class Widget(db.Model):
         
 
 # Widget Schema
-class WidgetSchema(ma.Schema):
+class WidgetSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        fields = ('id', 'name', 'num_parts', 'created', 'updated')
+        model = Widget
 
 # Init schema
 widget_schema = WidgetSchema()

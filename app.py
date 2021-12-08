@@ -4,11 +4,8 @@ from flask_marshmallow import Marshmallow
 import os
 
 # @TODO:
-# Validate params
 # Determine which fields to return for each request
-# Return HTTP status codes as appropriate
 # Use TYPE ANNOTATIONS
-# Handle out of range exceptions, etc
 # PEP8
 # Linter (flake8)
 # Unit Tests
@@ -17,7 +14,7 @@ import os
 
 basedir: str = os.path.abspath(os.path.dirname(__file__))
 
-# Init app
+# Init and configure app
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
