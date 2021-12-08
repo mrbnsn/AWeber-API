@@ -2,6 +2,10 @@ from app import db, ma
 
 # Widget Model
 class Widget(db.Model):
+    __table_args__ = (
+        db.CheckConstraint('Length(name) <= 64'),
+    )
+
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     name = db.Column(db.String(64), unique=True, nullable=False)
     num_parts = db.Column(db.Integer, nullable=False)
@@ -17,6 +21,7 @@ class Widget(db.Model):
 class WidgetSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Widget
+
 
 # Init schema
 widget_schema = WidgetSchema()

@@ -17,11 +17,12 @@ def create_widget():
         raise ValueError('Bad Request - parameter num_parts must be of type int')
 
     widget = Widget(name, num_parts)
-
+    
     db.session.add(widget)
     db.session.commit()
 
     return widget_schema.jsonify(widget)
+
 
 @app.route('/api/widget/<id>', methods=['GET'])
 def get_widget(id):
@@ -33,11 +34,13 @@ def get_widget(id):
 
     return widget_schema.jsonify(widget)
 
+
 @app.route('/api/widgets', methods=['GET'])
 def list_widgets():
     '''List all widgets'''
     widgets = Widget.query.all()
     return jsonify(widgets_schema.dump(widgets))
+
 
 @app.route('/api/widget/<id>', methods=['PUT'])
 def update_widget(id):
@@ -61,6 +64,7 @@ def update_widget(id):
     db.session.commit()
 
     return widget_schema.jsonify(widget)
+
 
 @app.route('/api/widget/<id>', methods=['DELETE'])
 def delete_widget(id):

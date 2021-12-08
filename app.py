@@ -4,7 +4,6 @@ from flask_marshmallow import Marshmallow
 import os
 
 # @TODO:
-# Determine which fields to return for each request
 # Use TYPE ANNOTATIONS
 # PEP8
 # Linter (flake8)
@@ -19,14 +18,14 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Import routes
-from api import *
-
 # Init SQLAlchemy
 db = SQLAlchemy(app)
 
 # Init Marshmallow
 ma = Marshmallow(app)
+
+# Import routes
+from api import *
 
 # Run server
 if __name__ == '__main__':
