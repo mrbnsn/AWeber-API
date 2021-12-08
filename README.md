@@ -44,7 +44,7 @@ All request endpoints are relative to `http://127.0.0.1:5000`.
 - - `num_parts`: `int`
 
 ### Delete
-- Submit `DELETE` request to `http://127.0.0.1:5000/api/widget/<widget_id>`, providing the target widget ID.
+- Submit `DELETE` request to `/api/widget/<widget_id>`, providing the target widget ID.
 
 ## Tech Stack
 - Python 3.9.9
