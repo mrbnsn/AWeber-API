@@ -14,15 +14,16 @@ Submit API requests using your preferred method, e.g. Postman.
 
 A database is included (`db.sqlite`) with a couple of example widgets. To create a fresh database:
 
-* Delete the existing database
-* Open the Python shell within the virtual environment
-* Run the commands `from app import db` and `db.create_all()`
-* This will create a fresh `db.sqlite` file in the root directory.
+1. Delete the existing database
+2. Open the Python shell within the virtual environment
+3. Run the commands `from app import db` and `db.create_all()`
+
+This will create a fresh `db.sqlite` file in the root directory.
 
 ## API Documentation
 
 ### Base URL
-All request endpoints will are relative to `http://127.0.0.1:5000`.
+All request endpoints are relative to `http://127.0.0.1:5000`.
 
 ### Create
 - Header `Content-Type: application/json`
