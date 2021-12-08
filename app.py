@@ -10,7 +10,6 @@ from flask_marshmallow import Marshmallow
 # Use TYPE ANNOTATIONS
 # Unit Tests
 # OpenAPI spec file
-# Pass Bandit security analysis
 
 basedir: str = os.path.abspath(os.path.dirname(__file__))
 
@@ -31,4 +30,4 @@ from api import *
 
 # Run server
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
