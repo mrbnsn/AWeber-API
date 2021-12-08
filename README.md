@@ -48,7 +48,7 @@ All request endpoints are relative to `http://127.0.0.1:5000`.
 
 ## Tech Stack
 - Python 3.9.9
-- Flask (to server the API)
+- Flask (to serve the API)
 - SQLAlchemy (to model the data)
 - Marshmallow (to serialize the data)
 - SQLite
