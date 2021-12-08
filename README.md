@@ -12,3 +12,6 @@ Python API for AWeber assessment
 `$ source venv/bin/activate`
 5. Install dependencies:
 `$ pip3 install -r requirements.txt`
+6. Run app:
+`$ python app.py`
+7. Submit API requests to `http://127.0.0.1:5000/api/`
