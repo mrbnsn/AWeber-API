@@ -7,7 +7,6 @@ from flask_marshmallow import Marshmallow
 
 
 # @TODO:
-# Use TYPE ANNOTATIONS
 # Unit Tests
 # OpenAPI spec file
 
@@ -30,4 +29,4 @@ from api import *
 
 # Run server
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

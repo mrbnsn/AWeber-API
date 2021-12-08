@@ -27,7 +27,7 @@ def create_widget():
 
 
 @app.route('/api/widget/<widget_id>', methods=['GET'])
-def get_widget(widget_id):
+def get_widget(widget_id: int):
     '''Get a widget by ID'''
     widget = Widget.query.get(widget_id)
 
@@ -45,7 +45,7 @@ def list_widgets():
 
 
 @app.route('/api/widget/<widget_id>', methods=['PUT'])
-def update_widget(widget_id):
+def update_widget(widget_id: int):
     '''Update a widget'''
     widget = Widget.query.get(widget_id)
 
@@ -69,7 +69,7 @@ def update_widget(widget_id):
 
 
 @app.route('/api/widget/<widget_id>', methods=['DELETE'])
-def delete_widget(widget_id):
+def delete_widget(widget_id: int):
     '''Delete a widget by ID'''
     widget = Widget.query.get(widget_id)
 
